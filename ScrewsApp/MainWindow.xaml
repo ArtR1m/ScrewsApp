@@ -1,0 +1,31 @@
+﻿<Window x:Class="ScrewsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrewsApp"
+        mc:Ignorable="d"
+        Closed="Window_Closed"
+        Icon="Resources/icon.ico"
+        Title="Главное окно" MaxHeight="450" MaxWidth="1200" Width="900" MinHeight="450" MinWidth="900">
+    <Grid Background="#282828">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.20*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="ID:" Grid.Column="1" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="{StaticResource GlobalFont}"
+               FontSize="17" Margin="5,5,0,0" Name="labelId"/>
+        <Label Content="Роль:" Grid.Column="1" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="{StaticResource GlobalFont}"
+               Margin="5,30,0,0" FontSize="17" Name="labelRole"/>
+        <Button Style="{DynamicResource ButtonStyleHeader}" Name="buttonProfile" Grid.Column="0" Content="Профиль" FontFamily="{StaticResource GlobalFont}" 
+                FontSize="21" Foreground="White" Click="buttonProfile_Click"/>
+        <Button Style="{DynamicResource ButtonStyleHeader}" Name="buttonUsers" Grid.Column="2" Content="Управление пользователями" FontSize="18" FontFamily="{StaticResource GlobalFont}" 
+                Foreground="White" Click="buttonUsers_Click"/>
+        <Frame Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
